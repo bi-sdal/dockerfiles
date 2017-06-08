@@ -16,7 +16,9 @@ cran_pkgs <- c(
     'flexdashboard',
     'DT',
     'leaflet',
-    'highcharter'
+    'highcharter',
+    'ggmap',
+    'rgdal'
 )
 
 github_pkgs <- c(
