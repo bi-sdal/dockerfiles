@@ -1,0 +1,103 @@
+version: '2'
+
+volumes:
+  pg_data:
+  dkw_data:
+  dkw_conf:
+  dkw_lib:
+
+services:
+  postgresql:
+    image: dads2busy/c7-ssh-ldap-pg
+    container_name: postgresql
+    networks:
+        dspg:
+            ipv4_address: 172.16.238.3
+    volumes:
+      - pg_data:/var/lib/pgsql/9.6/data
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 5433:5432
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    networks:
+        dspg:
+            ipv4_address: 172.16.238.5
+    links:
+      - postgresql
+    ports:
+      - 8080:8080
+
+  rstudio:
+    image: dads2busy/c7-ssh-ldap-mro-rss
+    container_name: rstudio
+    networks:
+        dspg:
+            ipv4_address: 172.16.238.10
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8788:8787
+
+  rstudio2:
+    image: dads2busy/c7-ssh-ldap-mro-rss
+    container_name: rstudio2
+    networks:
+        dspg:
+            ipv4_address: 172.16.238.11
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8789:8787
+
+  rstudio3:
+    image: dads2busy/c7-ssh-ldap-mro-rss
+    container_name: rstudio3
+    networks:
+        dspg:
+            ipv4_address: 172.16.238.12
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8790:8787
+
+  dokuwiki:
+    image: dads2busy/c7-ssh-ldap-httpd-dkw
+    container_name: dokuwiki
+    networks:
+        dspg:
+            ipv4_address: 172.16.238.8
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - dkw_data:/var/www/html/dokuwiki/data
+      - dkw_conf:/var/www/html/dokuwiki/conf
+      - dkw_lib:/var/www/html/dokuwiki/lib
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8282:80
+
+networks:
+    dspg:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+            - subnet: 172.16.238.0/24
+              gateway: 172.16.238.1
