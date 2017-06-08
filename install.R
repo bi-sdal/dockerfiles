@@ -17,6 +17,17 @@ cran_pkgs <- c(
     'DT',
     'leaflet',
     'highcharter',
+    'GGally',
+    'glmnet',
+    'useful',
+    'coefplot',
+    'rpart.plot',
+    'randomForest',
+    'RJSONIO',
+    'PKI',
+    'packrat',
+    'rsconnect',
+    'rstan',
     'ggmap',
     'rgdal'
 )
