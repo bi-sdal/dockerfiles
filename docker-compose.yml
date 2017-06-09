@@ -79,7 +79,7 @@ services:
       - 8790:8787
 
   dokuwiki:
-    image: dads2busy/c7-ssh-ldap-httpd-dkw
+    image: sdal/dkw-httpd-ldap-ssh-c7
     container_name: dokuwiki
     networks:
         dspg:
