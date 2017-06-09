@@ -1,0 +1,3 @@
+[submodule "mro-ldap-ssh-c7"]
+	path = mro-ldap-ssh-c7
+	url = git@github.com:bi-sdal/mro-ldap-ssh-c7.git
