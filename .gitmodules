@@ -10,3 +10,9 @@
 [submodule "rss-mro-ldap-ssh-c7"]
 	path = rss-mro-ldap-ssh-c7
 	url = git@github.com:bi-sdal/rss-mro-ldap-ssh-c7.git
+[submodule "ldap-ssh-c7"]
+	path = ldap-ssh-c7
+	url = git@github.com:bi-sdal/ldap-ssh-c7.git
+[submodule "c7"]
+	path = c7
+	url = git@github.com:bi-sdal/c7.git
