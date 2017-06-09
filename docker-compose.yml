@@ -33,7 +33,7 @@ services:
       - 8080:8080
 
   rstudio:
-    image: dads2busy/c7-ssh-ldap-mro-rss
+    image: sdal/rss-mro-ldap-ssh-c7
     container_name: rstudio
     networks:
         dspg:
