@@ -1,3 +1,12 @@
 [submodule "mro-ldap-ssh-c7"]
 	path = mro-ldap-ssh-c7
 	url = git@github.com:bi-sdal/mro-ldap-ssh-c7.git
+[submodule "pg-ldap-ssh-c7"]
+	path = pg-ldap-ssh-c7
+	url = git@github.com:bi-sdal/pg-ldap-ssh-c7.git
+[submodule "dkw-ngx-ldap-ssh-c7"]
+	path = dkw-ngx-ldap-ssh-c7
+	url = git@github.com:bi-sdal/dkw-ngx-ldap-ssh-c7.git
+[submodule "rss-mro-ldap-ssh-c7"]
+	path = rss-mro-ldap-ssh-c7
+	url = git@github.com:bi-sdal/rss-mro-ldap-ssh-c7.git
