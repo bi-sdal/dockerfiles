@@ -19,3 +19,6 @@
 [submodule "dkw-httpd-ldap-ssh-c7"]
 	path = dkw-httpd-ldap-ssh-c7
 	url = git@github.com:bi-sdal/dkw-httpd-ldap-ssh-c7.git
+[submodule "httpd-ldap-ssh-c7"]
+	path = httpd-ldap-ssh-c7
+	url = git@github.com:bi-sdal/httpd-ldap-ssh-c7.git
