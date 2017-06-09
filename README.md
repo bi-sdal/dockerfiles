@@ -10,8 +10,8 @@
 
 # Pushing and Pulling
 
-`git pull --recurse-submodules=yes origin master`
-`git push --recurse-submodules=yes origin master`
+- `git pull --recurse-submodules=yes origin master`
+- `git push --recurse-submodules=yes origin master`
 
 # What's in here?
 
