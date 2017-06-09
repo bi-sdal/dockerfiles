@@ -4,7 +4,7 @@ Getting this repository
 
 - `clone` this repository as normal
 - then in the repository run:
-    - `git submoidule init`
+    - `git submodule init`
     - `git submodule update`
 - or you can run `git clone --recursive <repository URL>`
 
