@@ -1,12 +1,18 @@
 # dockerfiles
 
-Getting this repository
+# Getting this repository
 
 - `clone` this repository as normal
 - then in the repository run:
     - `git submodule init`
     - `git submodule update`
 - or you can run `git clone --recursive <repository URL>`
+
+# Pushing and Pulling
+
+`git pull --recursive-submodules origin master`
+
+# What's in here?
 
 scripts and stuff for the docker containers
 
