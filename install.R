@@ -29,7 +29,10 @@ cran_pkgs <- c(
     'rsconnect',
     'rstan',
     'ggmap',
-    'rgdal'
+    # GIS packages
+    'rgdal',
+    'rgeos',
+    'tigris'
 )
 
 github_pkgs <- c(
