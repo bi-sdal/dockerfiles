@@ -8,6 +8,16 @@
     - `git submodule update`
 - or you can run `git clone --recursive <repository URL>`
 
+# Getting (fetch/merge) all changes in submodles
+
+assumes you want to update the checkout to the `master` branch
+
+`git submodule update --remote`
+
+# Getting the `diff` by showing submodule log
+
+`git diff --submodule`
+
 # Pushing and Pulling
 
 - `git pull --recurse-submodules=yes origin master`
