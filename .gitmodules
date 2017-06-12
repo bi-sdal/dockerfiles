@@ -22,3 +22,6 @@
 [submodule "adminer-httpd-ldap-ssh-c7"]
 	path = adminer-httpd-ldap-ssh-c7
 	url = git@github.com:bi-sdal/adminer-httpd-ldap-ssh-c7.git
+[submodule "ngx-ldap-ssh-c7"]
+	path = ngx-ldap-ssh-c7
+	url = git@github.com:bi-sdal/ngx-ldap-ssh-c7.git
