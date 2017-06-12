@@ -23,15 +23,19 @@ services:
       - 5433:5432
 
   adminer:
-    image: adminer
+    image: sdal/adminer
     container_name: adminer
     networks:
         dspg:
             ipv4_address: 172.16.238.5
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    cap_add:
+      - SYS_ADMIN
     links:
       - postgresql
     ports:
-      - 8080:8080
+      - 8080:80
 
   rstudio:
     image: sdal/rss-mro-ldap-ssh-c7
@@ -62,21 +66,6 @@ services:
       - SYS_ADMIN
     ports:
       - 8789:8787
-
-  rstudio3:
-    image: sdal/pg-ldap-ssh-c7
-    container_name: rstudio3
-    networks:
-        dspg:
-            ipv4_address: 172.16.238.12
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-      - /etc/group:/etc/group
-      - /home:/home
-    cap_add:
-      - SYS_ADMIN
-    ports:
-      - 8790:8787
 
   dokuwiki:
     image: sdal/dkw-httpd-ldap-ssh-c7
