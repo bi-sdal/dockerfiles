@@ -1,0 +1,23 @@
+lvcreate --wipesignatures y -n thinpool docker -l 95%VG
+lvcreate --wipesignatures y -n thinpoolmeta docker -l 1%VG
+
+lvconvert -y --zero n -c 512K --thinpool docker/thinpool --poolmetadata docker/thinpoolmeta
+
+vi /etc/lvm/profile/docker-thinpool.profile
+
+activation {
+thin_pool_autoextend_threshold=80
+thin_pool_autoextend_percent=20
+}
+
+lvchange --metadataprofile docker-thinpool docker/thinpool
+
+# If the Docker daemon was previously started
+mkdir /var/lib/docker.bk
+mv /var/lib/docker/* /var/lib/docker.bk
+
+/etc/sysconfig/docker-storage: DOCKER_STORAGE_OPTIONS="--storage-driver devicemapper --storage-opt dm.fs=xfs --storage-opt dm.thinpooldev=/dev/mapper/system-docker--pool --storage-opt dm.use_deferred_removal=true "
+
+systemctl daemon-reload
+systemctl start docker
+
