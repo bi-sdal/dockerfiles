@@ -23,7 +23,7 @@ services:
       - 5433:5432
 
   adminer:
-    image: sdal/adminer
+    image: sdal/adminer-httpd-ldap-ssh-c7
     container_name: adminer
     networks:
         dspg:
