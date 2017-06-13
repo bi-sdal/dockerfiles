@@ -2,11 +2,11 @@
 
 # Getting this repository
 
-- `clone` this repository as normal
-- then in the repository run:
-    - `git submodule init`
-    - `git submodule update`
-- or you can run `git clone --recursive <repository URL>`
+- `clone` this repository as normal: `git clone git@github.com:bi-sdal/dockerimages.git`
+    - then in the repository run:
+        - `git submodule init`
+        - `git submodule update`
+- or you can run `git clone --recursive git@github.com:bi-sdal/dockerimages.git`
 
 # Getting (fetch/merge) all changes in submodles
 
