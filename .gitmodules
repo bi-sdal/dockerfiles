@@ -28,3 +28,6 @@
 [submodule "dkw-ngx-ldap-ssh-c7"]
 	path = dkw-ngx-ldap-ssh-c7
 	url = git@github.com:bi-sdal/dkw-ngx-ldap-ssh-c7.git
+[submodule "adm-ngx-ldap-ssh-c7"]
+	path = adm-ngx-ldap-ssh-c7
+	url = git@github.com:bi-sdal/adm-ngx-ldap-ssh-c7.git
