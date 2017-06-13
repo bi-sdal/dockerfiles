@@ -1,27 +1,28 @@
 # dockerfiles
 
+Pretty much the entire SDAL infrastructure stack.
+
 # Getting this repository
 
-- `clone` this repository as normal
-- then in the repository run:
-    - `git submodule init`
-    - `git submodule update`
-- or you can run `git clone --recursive <repository URL>`
+- `clone` this repository as normal: `git clone git@github.com:bi-sdal/dockerimages.git`
+    - then in the repository run:
+        - `git submodule init`
+        - `git submodule update`
+- or you can run `git clone --recursive git@github.com:bi-sdal/dockerimages.git`
 
-# Getting (fetch/merge) all changes in submodles
+# Making changes to the repository (not the submodules)
 
-assumes you want to update the checkout to the `master` branch
+- Make edits like before
+- `git add`
+- `git commit -m ''`
+- `git push origin master`
 
-`git submodule update --remote`
+# Making changes to one of the submodules
 
-# Getting the `diff` by showing submodule log
-
-`git diff --submodule`
-
-# Pushing and Pulling
-
-- `git pull --recurse-submodules=yes origin master`
-- `git push --recurse-submodules=on-demand origin master`
+- `cd` into the submodule
+- `git checkout master`
+- make changes and add/commit like a normal repository
+- update submodule references (TODO)
 
 # What's in here?
 
@@ -29,10 +30,36 @@ scripts and stuff for the docker containers
 
 - `install.R`: Script to install packages (used by docker containers)
 - `docker-compose.yml`: `docker-compose up -d` to spin up all the containers
+- `build.sh`: script to built the containers properly, call this script from within one of the submodule folders `../build.sh`
+- `gettin_docker_running_centos_7`: ???
 
-This repository uses `git submodules` because of how the `docker-compose.yml` spins up containers.
-This allows us to keep the `docker-compose.yml` file on the same directory as the other docker containers,
-without having to rename containers as they spin up.
+This repository uses `git submodules`
 
-something..something.. how `docker-compose` uses the folder it is in as a prefix for container names.
+Note: `docker-compose` uses the folder it is in as a prefix for container names.
 Caused an error with the networking.
+So the `dockerimages` repository name is really important here.
+
+# Older commands and instructions
+
+## Getting (fetch/merge) all changes in submodles
+
+assumes you want to update the checkout to the `master` branch
+
+`git submodule update --remote --merge`
+
+## Getting the `diff` by showing submodule log
+
+`git diff --submodule`
+
+## Update everything
+
+`git submodule foreach git pull origin master`
+
+## AHHH!!! Just bring me to master
+
+`git submodule foreach git checkout master && git submodule foreach git pull origin master`
+
+## Pushing and Pulling
+
+- `git pull --recurse-submodules=yes origin master`
+- `git push --recurse-submodules=on-demand origin master`
