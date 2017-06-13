@@ -18,6 +18,10 @@ assumes you want to update the checkout to the `master` branch
 
 `git diff --submodule`
 
+# Update everything
+
+`git submodule foreach git pull origin master`
+
 # Pushing and Pulling
 
 - `git pull --recurse-submodules=yes origin master`
