@@ -12,7 +12,7 @@
 
 assumes you want to update the checkout to the `master` branch
 
-`git submodule update --remote`
+`git submodule update --remote --merge`
 
 # Getting the `diff` by showing submodule log
 
