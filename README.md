@@ -22,6 +22,10 @@ assumes you want to update the checkout to the `master` branch
 
 `git submodule foreach git pull origin master`
 
+# AHHH!!! Just bring me to master
+
+`git submodule foreach git checkout master && git submodule foreach git pull origin master`
+
 # Pushing and Pulling
 
 - `git pull --recurse-submodules=yes origin master`
