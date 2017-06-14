@@ -70,9 +70,13 @@ assumes you want to update the checkout to the `master` branch
 
 `git submodule foreach git pull origin master`
 
-## AHHH!!! Just bring me to master
+## AHHH!!! Just bring me to master (discard all changes)
 
-`git submodule foreach git checkout master && git submodule foreach git pull origin master`
+```bash
+git submodule foreach git checkout master && \
+git submodule foreach git pull origin master && \
+git pull origin master
+```
 
 ## Pushing and Pulling
 
