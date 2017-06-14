@@ -92,6 +92,7 @@ github_libs <- sapply(stringr::str_split(github_pkgs, pattern = '/'), function(x
 
 all_pkgs <- c(cran_pkgs, github_libs)
 
+# you install it using rthreejs, but you load it with threejs
 all_pkgs[all_pkgs == 'rthreejs'] <- 'threejs'
 
 for (p in all_pkgs){
