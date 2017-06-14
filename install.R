@@ -3,6 +3,7 @@ cran_pkgs <- c(
     'rgdal',
     'rgeos',
     'tigris',
+    'osmar',
     #
     'DBI',
     'RPostgreSQL',
