@@ -17,7 +17,11 @@ Pretty much the entire SDAL infrastructure stack.
 | **dkw-httpd**-ldap-ssh-c7     | [![Build Status](https://travis-ci.org/bi-sdal/dkw-httpd-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/dkw-httpd-ldap-ssh-c7)         |
 | **dkw-ngx**-ldap-ssh-c7       | [![Build Status](https://travis-ci.org/bi-sdal/dkw-ngx-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/dkw-ngx-ldap-ssh-c7)             |
 
-# Getting this repository
+# Basic useage
+
+Commonly used functions
+
+### Getting this repository
 
 - `clone` this repository as normal: `git clone git@github.com:bi-sdal/dockerimages.git`
     - then in the repository run:
@@ -25,19 +29,23 @@ Pretty much the entire SDAL infrastructure stack.
         - `git submodule update`
 - or you can run `git clone --recursive git@github.com:bi-sdal/dockerimages.git`
 
-# Making changes to the repository (not the submodules)
+### Making changes to the repository (not the submodules)
 
 - Make edits like before
 - `git add`
 - `git commit -m ''`
 - `git push origin master`
 
-# Making changes to one of the submodules
+### Making changes to one of the submodules
 
 - `cd` into the submodule
 - `git checkout master`
 - make changes and add/commit like a normal repository
 - update submodule references (TODO)
+
+### Add a submodule
+
+`git submodule add <GIT URL>`
 
 # What's in here?
 
