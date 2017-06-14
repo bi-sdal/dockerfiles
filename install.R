@@ -1,5 +1,4 @@
 cran_pkgs <- c(
-    'openxlsx',
     'DBI',
     'RPostgreSQL',
     'tidyverse',
@@ -32,8 +31,7 @@ cran_pkgs <- c(
     'ggmap',
     # GIS packages
     'rgdal',
-    'rgeos',
-    'tigris'
+    'rgeos'
 )
 
 github_pkgs <- c(
