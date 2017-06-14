@@ -1,4 +1,9 @@
 cran_pkgs <- c(
+    # GIS packages
+    'rgdal',
+    'rgeos',
+    'tigris',
+    #
     'DBI',
     'RPostgreSQL',
     'tidyverse',
@@ -28,10 +33,7 @@ cran_pkgs <- c(
     'packrat',
     'rsconnect',
     'rstan',
-    'ggmap',
-    # GIS packages
-    'rgdal',
-    'rgeos'
+    'ggmap'
 )
 
 github_pkgs <- c(
