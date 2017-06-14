@@ -31,8 +31,7 @@ cran_pkgs <- c(
     'ggmap',
     # GIS packages
     'rgdal',
-    'rgeos',
-    'tigris'
+    'rgeos'
 )
 
 github_pkgs <- c(
