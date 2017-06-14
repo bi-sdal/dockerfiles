@@ -41,7 +41,11 @@ Commonly used functions
 - `cd` into the submodule
 - `git checkout master`
 - make changes and add/commit like a normal repository
-- update submodule references (TODO)
+- `cd ..` back to the root repository
+- update submodule references
+    - `git add <submodule folder>`
+    - `git commit 'update submodule references`
+    - `git push origin master`
 
 ### Add a submodule
 
