@@ -38,25 +38,15 @@ Commonly used functions
 
 ### Making changes to one of the submodules
 
-#### Manual way
-- `cd` into the submodule
-- `git checkout master`
-- make changes and add/commit like a normal repository
-- `cd ..` back to the root repository
+- make change to individual submodule
+    - `cd` into the submodule
+    - `git checkout master`
+    - make yo changes
+    - `git add` / `git commit` like a normal repository
+    - `cd ..` back to the root repository
 - update submodule references
-    - `git add <submodule folder>`
-    - `git commit 'update submodule references`
-    - `git push origin master`
-
-#### More automatic way (NEEDS TESTING)
-
-- `cd` into the submodule
-- `git checkout master`
-- make changes
-- `cd ..` back to root repository
-- `git add -A`
-- `git commit -m 'i massage goods'`
-- `git push --recurse-submodule=on-demand origin master`
+    - `git commit -am 'update submodule references'`
+    - `git push --recurse-submodules=on-demand origin master`
 
 ### Add a submodule
 
