@@ -1,5 +1,4 @@
 cran_pkgs <- c(
-    'openxlsx',
     'DBI',
     'RPostgreSQL',
     'tidyverse',
