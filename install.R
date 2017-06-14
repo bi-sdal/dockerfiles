@@ -4,7 +4,11 @@ cran_pkgs <- c(
     'rgeos',
     'tigris',
     'osmar',
+    'tmap',
+    'tmaptools',
+    'sp',
     #
+    'magrittr',
     'DBI',
     'RPostgreSQL',
     'tidyverse',
