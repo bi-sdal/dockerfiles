@@ -8,7 +8,6 @@ volumes:
 
 services:
   postgresql:
-    # image: dads2busy/c7-ssh-ldap-pg
     image: sdal/pg-ldap-ssh-c7
     container_name: postgresql
     networks:
