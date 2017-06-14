@@ -31,6 +31,6 @@
 [submodule "adm-ngx-ldap-ssh-c7"]
 	path = adm-ngx-ldap-ssh-c7
 	url = git@github.com:bi-sdal/adm-ngx-ldap-ssh-c7.git
-[submodule "rpkg-mro-ldap-ssh-c7"]
-	path = rpkg-mro-ldap-ssh-c7
-	url = git@github.com:bi-sdal/rpkg-mro-ldap-ssh-c7.git
+[submodule "rpkgs-mro-ldap-ssh-c7"]
+	path = rpkgs-mro-ldap-ssh-c7
+	url = git@github.com:bi-sdal/rpkgs-mro-ldap-ssh-c7.git
