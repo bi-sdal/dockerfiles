@@ -45,7 +45,8 @@ Commonly used functions
 
 ### Add a submodule
 
-`git submodule add <GIT URL>`
+- `git submodule add <GIT URL>`
+- `git submodule update --remote`
 
 # What's in here?
 
