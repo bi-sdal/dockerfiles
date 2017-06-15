@@ -5,6 +5,7 @@ volumes:
   dkw_data:
   dkw_conf:
   dkw_lib:
+  rpkgs:
 
 services:
   postgresql:
@@ -65,6 +66,17 @@ services:
       - SYS_ADMIN
     ports:
       - 8789:8787
+
+  rpkgs:
+    image: sdal/rpkgs-mro-ldap-ssh-c7
+    container_name: rpkgs
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/home/rpkgs/rpkgs
+    cap_add:
+      - SYS_ADMIN
 
   dokuwiki:
     image: sdal/dkw-httpd-ldap-ssh-c7
