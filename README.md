@@ -53,6 +53,11 @@ Commonly used functions
 - `git submodule add <GIT URL>`
 - `git submodule update --remote`
 
+### Pulling down a new submodule created elsewhere
+
+- `git submodule init`
+- `git submodule update --remote`
+
 # What's in here?
 
 scripts and stuff for the docker containers
