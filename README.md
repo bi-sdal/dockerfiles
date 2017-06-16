@@ -1,13 +1,11 @@
 # dockerfiles
 
-Pretty much the entire SDAL infrastructure stack.
+~~Pretty much~~ the entire SDAL infrastructure stack.
+
+### Deployed images
 
 | Container                     | Status                                                                                                                                                |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **c7**                        | [![Build Status](https://travis-ci.org/bi-sdal/c7.svg?branch=master)](https://travis-ci.org/bi-sdal/c7)                                               |
-| **ldap**-ssh-c7               | [![Build Status](https://travis-ci.org/bi-sdal/ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/ldap-ssh-c7)                             |
-| **ngx**-ldap-ssh-c7           | [![Build Status](https://travis-ci.org/bi-sdal/ngx-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/ngx-ldap-ssh-c7)                     |
-| **httpd**-ldap-ssh-c7         | [![Build Status](https://travis-ci.org/bi-sdal/httpd-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/httpd-ldap-ssh-c7)                 |
 | **mro**-ldap-ssh-c7           | [![Build Status](https://travis-ci.org/bi-sdal/mro-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/mro-ldap-ssh-c7)                     |
 | **mro3.3.3**-ldap-ssh-c7      | [![Build Status](https://travis-ci.org/bi-sdal/mro3.3.3-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/mro3.3.3-ldap-ssh-c7)           |
 | **pg**-ldap-ssh-c7            | [![Build Status](https://travis-ci.org/bi-sdal/pg-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/pg-ldap-ssh-c7)                       |
@@ -16,6 +14,15 @@ Pretty much the entire SDAL infrastructure stack.
 | **adminer-httpd**-ldap-ssh-c7 | [![Build Status](https://travis-ci.org/bi-sdal/adminer-httpd-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/adminer-httpd-ldap-ssh-c7) |
 | **dkw-httpd**-ldap-ssh-c7     | [![Build Status](https://travis-ci.org/bi-sdal/dkw-httpd-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/dkw-httpd-ldap-ssh-c7)         |
 | **dkw-ngx**-ldap-ssh-c7       | [![Build Status](https://travis-ci.org/bi-sdal/dkw-ngx-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/dkw-ngx-ldap-ssh-c7)             |
+
+### Base images
+
+| Container                     | Status                                                                                                                                                |
+|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **c7**                        | [![Build Status](https://travis-ci.org/bi-sdal/c7.svg?branch=master)](https://travis-ci.org/bi-sdal/c7)                                               |
+| **ldap**-ssh-c7               | [![Build Status](https://travis-ci.org/bi-sdal/ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/ldap-ssh-c7)                             |
+| **ngx**-ldap-ssh-c7           | [![Build Status](https://travis-ci.org/bi-sdal/ngx-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/ngx-ldap-ssh-c7)                     |
+| **httpd**-ldap-ssh-c7         | [![Build Status](https://travis-ci.org/bi-sdal/httpd-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/httpd-ldap-ssh-c7)                 |
 
 # Basic useage
 
@@ -28,6 +35,13 @@ Commonly used functions
         - `git submodule init`
         - `git submodule update`
 - or you can run `git clone --recursive git@github.com:bi-sdal/dockerimages.git`
+
+### Updating everything before making more changes
+
+```
+git pull --recurse-submodules=yes origin master
+git submodule update --remote --merge
+```
 
 ### Making changes to the repository (not the submodules)
 
@@ -72,6 +86,8 @@ This repository uses `git submodules`
 Note: `docker-compose` uses the folder it is in as a prefix for container names.
 Caused an error with the networking.
 So the `dockerimages` repository name is really important here.
+
+<hr>
 
 # Older commands and instructions
 
