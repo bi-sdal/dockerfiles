@@ -29,6 +29,13 @@ Commonly used functions
         - `git submodule update`
 - or you can run `git clone --recursive git@github.com:bi-sdal/dockerimages.git`
 
+### Updating everything before making more changes
+
+```
+git pull --recurse-submodules=yes origin master
+git submodule update --remote --merge
+```
+
 ### Making changes to the repository (not the submodules)
 
 - Make edits like before
