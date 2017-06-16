@@ -34,3 +34,9 @@
 [submodule "rpkgs-mro-ldap-ssh-c7"]
 	path = rpkgs-mro-ldap-ssh-c7
 	url = git@github.com:bi-sdal/rpkgs-mro-ldap-ssh-c7.git
+[submodule "tex-ldap-ssh-c7"]
+	path = tex-ldap-ssh-c7
+	url = git@github.com:bi-sdal/tex-ldap-ssh-c7.git
+[submodule "shy-mro-ldap-ssh-c7"]
+	path = shy-mro-ldap-ssh-c7
+	url = git@github.com:bi-sdal/shy-mro-ldap-ssh-c7.git
