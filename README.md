@@ -87,6 +87,8 @@ Note: `docker-compose` uses the folder it is in as a prefix for container names.
 Caused an error with the networking.
 So the `dockerimages` repository name is really important here.
 
+<hr>
+
 # Older commands and instructions
 
 ## Getting (fetch/merge) all changes in submodles
