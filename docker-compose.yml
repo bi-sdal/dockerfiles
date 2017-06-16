@@ -5,10 +5,10 @@ volumes:
   dkw_data:
   dkw_conf:
   dkw_lib:
+  rpkgs:
 
 services:
   postgresql:
-    # image: dads2busy/c7-ssh-ldap-pg
     image: sdal/pg-ldap-ssh-c7
     container_name: postgresql
     networks:
@@ -23,7 +23,7 @@ services:
       - 5433:5432
 
   adminer:
-    image: sdal/adminer
+    image: sdal/adminer-httpd-ldap-ssh-c7
     container_name: adminer
     networks:
         dspg:
@@ -47,6 +47,7 @@ services:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
       - /home:/home
+      - rpkgs:/rpkgs
     cap_add:
       - SYS_ADMIN
     ports:
@@ -62,10 +63,22 @@ services:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
       - /home:/home
+      - rpkgs:/rpkgs
     cap_add:
       - SYS_ADMIN
     ports:
       - 8789:8787
+
+  rpkgs:
+    image: sdal/rpkgs-mro-ldap-ssh-c7
+    container_name: rpkgs
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/home/rpkgs/rpkgs
+    cap_add:
+      - SYS_ADMIN
 
   dokuwiki:
     image: sdal/dkw-httpd-ldap-ssh-c7

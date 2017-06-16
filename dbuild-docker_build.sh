@@ -4,4 +4,5 @@ set -ex
 USERNAME=sdal
 # image name
 IMAGE=${PWD##*/}
+echo $IMAGE
 docker build --rm -t $USERNAME/$IMAGE:latest .
