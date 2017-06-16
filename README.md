@@ -1,6 +1,6 @@
 # dockerfiles
 
-Pretty much the entire SDAL infrastructure stack.
+~~Pretty much~~ the entire SDAL infrastructure stack.
 
 ### Deployed images
 
