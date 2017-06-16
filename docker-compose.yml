@@ -47,6 +47,7 @@ services:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
       - /home:/home
+      - rpkgs:/rpkgs
     cap_add:
       - SYS_ADMIN
     ports:
@@ -62,6 +63,7 @@ services:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
       - /home:/home
+      - rpkgs:/rpkgs
     cap_add:
       - SYS_ADMIN
     ports:
