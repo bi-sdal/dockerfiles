@@ -80,6 +80,23 @@ services:
     cap_add:
       - SYS_ADMIN
 
+  shiny:
+    image: sdal/shy-mro-ldap-ssh-c7
+    container_name: shiny
+    networks:
+        dspg:
+            ipv4_address: 172.16.238.15
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 3839:3838
+
+
   dokuwiki:
     image: sdal/dkw-httpd-ldap-ssh-c7
     container_name: dokuwiki
