@@ -1,11 +1,20 @@
 version: '2'
 
+# Notes about this docker-compose file
+# the R packages are installed within the rpkgs container
+# it uses the 'global' `rpkgs` volumne
+# The R packages are not installed by default (i.e., in the Dockerfile)
+# if you completely tear and remove all containers/volumnes/etc
+# remember to exec into the `rpkgs` container and manually install packages
+# there is code examples and links to the scripts in the rpkgs Dockerfile
+
 volumes:
   pg_data:
   dkw_data:
   dkw_conf:
   dkw_lib:
   rpkgs:
+  shy_apps:
 
 services:
   postgresql:
@@ -37,6 +46,32 @@ services:
     ports:
       - 8080:80
 
+  dokuwiki:
+    image: sdal/dkw-httpd-ldap-ssh-c7
+    container_name: dokuwiki
+    networks:
+        dspg:
+            ipv4_address: 172.16.238.8
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - dkw_data:/var/www/html/dokuwiki/data
+      - dkw_conf:/var/www/html/dokuwiki/conf
+      - dkw_lib:/var/www/html/dokuwiki/lib
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8282:80
+
+  rpkgs:
+    image: sdal/rpkgs-mro-ldap-ssh-c7
+    container_name: rpkgs
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - rpkgs:/home/rpkgs/rpkgs
+    cap_add:
+      - SYS_ADMIN
+
   rstudio:
     image: sdal/rss-mro-ldap-ssh-c7
     container_name: rstudio
@@ -53,33 +88,6 @@ services:
     ports:
       - 8788:8787
 
-  rstudio2:
-    image: sdal/rss-mro-ldap-ssh-c7
-    container_name: rstudio2
-    networks:
-        dspg:
-            ipv4_address: 172.16.238.11
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-      - /etc/group:/etc/group
-      - /home:/home
-      - rpkgs:/rpkgs
-    cap_add:
-      - SYS_ADMIN
-    ports:
-      - 8789:8787
-
-  rpkgs:
-    image: sdal/rpkgs-mro-ldap-ssh-c7
-    container_name: rpkgs
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-      - /etc/group:/etc/group
-      - /home:/home
-      - rpkgs:/home/rpkgs/rpkgs
-    cap_add:
-      - SYS_ADMIN
-
   shiny:
     image: sdal/shy-mro-ldap-ssh-c7
     container_name: shiny
@@ -91,27 +99,11 @@ services:
       - /etc/group:/etc/group
       - /home:/home
       - rpkgs:/rpkgs
+      - shy_apps:/srv/shiny-server/sdal
     cap_add:
       - SYS_ADMIN
     ports:
       - 3839:3838
-
-
-  dokuwiki:
-    image: sdal/dkw-httpd-ldap-ssh-c7
-    container_name: dokuwiki
-    networks:
-        dspg:
-            ipv4_address: 172.16.238.8
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-      - dkw_data:/var/www/html/dokuwiki/data
-      - dkw_conf:/var/www/html/dokuwiki/conf
-      - dkw_lib:/var/www/html/dokuwiki/lib
-    cap_add:
-      - SYS_ADMIN
-    ports:
-      - 8282:80
 
 networks:
     dspg:
