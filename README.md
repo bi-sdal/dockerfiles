@@ -32,14 +32,13 @@ Commonly used functions
 
 - `clone` this repository as normal: `git clone git@github.com:bi-sdal/dockerimages.git`
     - then in the repository run:
-        - `git submodule init`
-        - `git submodule update`
+        - `git submodule init && git submodule update`
 - or you can run `git clone --recursive git@github.com:bi-sdal/dockerimages.git`
 
 ### Updating everything before making more changes
 
 ```
-git pull --recurse-submodules=yes origin master
+git pull --recurse-submodules=yes origin master && \
 git submodule update --remote --merge
 ```
 
@@ -69,8 +68,10 @@ git submodule update --remote --merge
 
 ### Pulling down a new submodule created elsewhere
 
-- `git submodule init`
-- `git submodule update --remote`
+```
+git submodule init && \
+git submodule update --remote
+```
 
 # What's in here?
 
