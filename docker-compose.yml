@@ -62,6 +62,16 @@ services:
     ports:
       - 8282:80
 
+  mro:
+    image: sdal/mro-ldap-ssh-c7
+    container_name: mro
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - rpkgs:/home/rpkgs/rpkgs
+    cap_add:
+      - SYS_ADMIN
+
   rpkgs:
     image: sdal/rpkgs-mro-ldap-ssh-c7
     container_name: rpkgs
