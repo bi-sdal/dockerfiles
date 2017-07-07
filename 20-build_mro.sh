@@ -1,5 +1,7 @@
-cd c7 && dbuildnocache && cd ..
+# bass in dbuild or dbuildnocache
 
-cd ldap-ssh-c7 && dbuildnocache && cd ..
+cd c7 && $1 && cd ..
 
-cd mro-ldap-ssh-c7 && dbuildnocache && cd ..
+cd ldap-ssh-c7 && $1 && cd ..
+
+cd mro-ldap-ssh-c7 && $1 && cd ..

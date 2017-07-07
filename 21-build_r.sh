@@ -1,6 +1,8 @@
-cd rpkgs-mro-ldap-ssh-c7 && dbuildnocache && cd ..
+# pass in dbuild or dbuildnocache
 
-cd rss-mro-ldap-ssh-c7 && dbuildnocache && cd ..
+cd rpkgs-mro-ldap-ssh-c7 && $1 && cd ..
 
-cd shy-mro-ldap-ssh-c7 && dbuildnocache && cd ..
+cd rss-mro-ldap-ssh-c7 && $1 && cd ..
+
+cd shy-mro-ldap-ssh-c7 && $1 && cd ..
 
