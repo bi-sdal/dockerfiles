@@ -13,7 +13,6 @@ volumes:
   dkw_data:
   dkw_conf:
   dkw_lib:
-  rpkgs:
   shy_apps:
 
 services:
@@ -68,17 +67,6 @@ services:
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
-      - rpkgs:/home/rpkgs/rpkgs
-    cap_add:
-      - SYS_ADMIN
-
-  rpkgs:
-    image: sdal/rpkgs-mro-ldap-ssh-c7
-    container_name: rpkgs
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-      - /etc/group:/etc/group
-      - rpkgs:/home/rpkgs/rpkgs
     cap_add:
       - SYS_ADMIN
 
@@ -92,7 +80,6 @@ services:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
       - /home:/home
-      - rpkgs:/rpkgs
     cap_add:
       - SYS_ADMIN
     ports:
@@ -108,7 +95,6 @@ services:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
       - /home:/home
-      - rpkgs:/rpkgs
       - shy_apps:/srv/shiny-server/sdal
     cap_add:
       - SYS_ADMIN
