@@ -19,9 +19,6 @@ services:
   postgresql:
     image: sdal/pg-ldap-ssh-c7
     container_name: postgresql
-    networks:
-        dspg:
-            ipv4_address: 172.16.238.3
     volumes:
       - pg_data:/var/lib/pgsql/9.6/data
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -33,9 +30,6 @@ services:
   adminer:
     image: sdal/adminer-httpd-ldap-ssh-c7
     container_name: adminer
-    networks:
-        dspg:
-            ipv4_address: 172.16.238.5
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     cap_add:
@@ -48,9 +42,6 @@ services:
   dokuwiki:
     image: sdal/dkw-httpd-ldap-ssh-c7
     container_name: dokuwiki
-    networks:
-        dspg:
-            ipv4_address: 172.16.238.8
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - dkw_data:/var/www/html/dokuwiki/data
@@ -73,9 +64,6 @@ services:
   rstudio:
     image: sdal/rss-mro-ldap-ssh-c7
     container_name: rstudio
-    networks:
-        dspg:
-            ipv4_address: 172.16.238.10
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
@@ -88,9 +76,6 @@ services:
   shiny:
     image: sdal/shy-mro-ldap-ssh-c7
     container_name: shiny
-    networks:
-        dspg:
-            ipv4_address: 172.16.238.15
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
@@ -100,12 +85,3 @@ services:
       - SYS_ADMIN
     ports:
       - 3839:3838
-
-networks:
-    dspg:
-        driver: bridge
-        ipam:
-            driver: default
-            config:
-            - subnet: 172.16.238.0/24
-              gateway: 172.16.238.1
