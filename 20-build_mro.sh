@@ -1,4 +1,4 @@
-# bass in dbuild or dbuildnocache
+# pass in dbuild or dbuildnocache
 
 cd c7 && $1 && cd ..
 
