@@ -221,6 +221,20 @@ services:
     ports:
       - 3110:8787
 
+  rstudio_morr9:
+    image: sdal/rss-mro-ldap-ssh-c7
+    container_name: rstudio_morr9
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 3116:8787
+
   # DSPG STUDENTS
 
   rstudio_maddieka:
