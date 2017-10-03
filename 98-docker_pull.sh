@@ -5,4 +5,7 @@ docker pull sdal/rpkgs-mro-ldap-ssh-c7
 docker pull sdal/rss-mro-ldap-ssh-c7
 docker pull sdal/shy-mro-ldap-ssh-c7
 
+docker pull sdal/shy-mro-ldap-ssh-c7
+docker pull sdal/adminer-httpd-ldap-ssh-c7
+
 echo "Images pulled."
