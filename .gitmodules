@@ -40,3 +40,6 @@
 [submodule "shy-mro-ldap-ssh-c7"]
 	path = shy-mro-ldap-ssh-c7
 	url = git@github.com:bi-sdal/shy-mro-ldap-ssh-c7.git
+[submodule "r-ldap-ssh-c7"]
+	path = r-ldap-ssh-c7
+	url = git@github.com:bi-sdal/r-ldap-ssh-c7.git
