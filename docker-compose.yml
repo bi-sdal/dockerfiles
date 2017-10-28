@@ -103,7 +103,7 @@ services:
     cap_add:
       - SYS_ADMIN
     ports:
-      - 3839:3838
+      - 3126:3838
 
   ############################################
   # BEGIN INDIVIDUAL USER RSTUDIO CONTAINERS #
