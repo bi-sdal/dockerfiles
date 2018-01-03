@@ -105,6 +105,18 @@ services:
     ports:
       - 3126:3838
 
+  selenium_chrome:
+    image: selenium/standalone-chrome
+    container_name: selenium_chrome
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 4444:4444
+
   ############################################
   # BEGIN INDIVIDUAL USER RSTUDIO CONTAINERS #
   ############################################
@@ -234,6 +246,34 @@ services:
       - SYS_ADMIN
     ports:
       - 3116:8787
+
+  rstudio_isbrad:
+    image: sdal/rss-mro-ldap-ssh-c7
+    container_name: rstudio_isbrad
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8760:8787
+
+  rstudio_lintan:
+    image: sdal/rss-mro-ldap-ssh-c7
+    container_name: rstudio_lintan
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8761:8787
 
   # DSPG STUDENTS
 
