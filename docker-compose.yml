@@ -29,17 +29,17 @@ services:
     ports:
       - 5433:5432
 
-  adminer:
-    image: sdal/adminer-httpd-ldap-ssh-c7
-    container_name: adminer
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    cap_add:
-      - SYS_ADMIN
-    links:
-      - postgresql
-    ports:
-      - 8080:80
+ # adminer:
+ #   image: sdal/adminer-httpd-ldap-ssh-c7
+ #   container_name: adminer
+ #   volumes:
+ #     - /sys/fs/cgroup:/sys/fs/cgroup:ro
+ #   cap_add:
+ #     - SYS_ADMIN
+ #   links:
+ #     - postgresql
+ #   ports:
+ #     - 8080:80
 
   dokuwiki:
     image: sdal/dkw-httpd-ldap-ssh-c7
