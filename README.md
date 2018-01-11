@@ -1,4 +1,26 @@
-# dockerfiles
+README
+================
+
+-   [dockerfiles](#dockerfiles)
+    -   [Deployed images](#deployed-images)
+    -   [Base images](#base-images)
+-   [Basic useage](#basic-useage)
+    -   [Getting this repository](#getting-this-repository)
+    -   [Updating everything before making more changes](#updating-everything-before-making-more-changes)
+    -   [Making changes to the repository (not the submodules)](#making-changes-to-the-repository-not-the-submodules)
+    -   [Making changes to one of the submodules](#making-changes-to-one-of-the-submodules)
+    -   [Add a submodule](#add-a-submodule)
+    -   [Pulling down a new submodule created elsewhere](#pulling-down-a-new-submodule-created-elsewhere)
+-   [What's in here?](#whats-in-here)
+-   [Older commands and instructions](#older-commands-and-instructions)
+    -   [Getting (fetch/merge) all changes in submodles](#getting-fetchmerge-all-changes-in-submodles)
+    -   [Getting the `diff` by showing submodule log](#getting-the-diff-by-showing-submodule-log)
+    -   [Update everything](#update-everything)
+    -   [AHHH!!! Just bring me to master (discard all changes)](#ahhh-just-bring-me-to-master-discard-all-changes)
+    -   [Pushing and Pulling](#pushing-and-pulling)
+
+dockerfiles
+===========
 
 ~~Pretty much~~ the entire SDAL infrastructure stack.
 
@@ -17,104 +39,107 @@
 
 ### Base images
 
-| Container                     | Status                                                                                                                                                |
-|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **c7**                        | [![Build Status](https://travis-ci.org/bi-sdal/c7.svg?branch=master)](https://travis-ci.org/bi-sdal/c7)                                               |
-| **ldap**-ssh-c7               | [![Build Status](https://travis-ci.org/bi-sdal/ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/ldap-ssh-c7)                             |
-| **ngx**-ldap-ssh-c7           | [![Build Status](https://travis-ci.org/bi-sdal/ngx-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/ngx-ldap-ssh-c7)                     |
-| **httpd**-ldap-ssh-c7         | [![Build Status](https://travis-ci.org/bi-sdal/httpd-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/httpd-ldap-ssh-c7)                 |
+| Container             | Status                                                                                                                                |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| **c7**                | [![Build Status](https://travis-ci.org/bi-sdal/c7.svg?branch=master)](https://travis-ci.org/bi-sdal/c7)                               |
+| **ldap**-ssh-c7       | [![Build Status](https://travis-ci.org/bi-sdal/ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/ldap-ssh-c7)             |
+| **ngx**-ldap-ssh-c7   | [![Build Status](https://travis-ci.org/bi-sdal/ngx-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/ngx-ldap-ssh-c7)     |
+| **httpd**-ldap-ssh-c7 | [![Build Status](https://travis-ci.org/bi-sdal/httpd-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/httpd-ldap-ssh-c7) |
 
-# Basic useage
+![](README_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-1-1.png)
+
+Basic useage
+============
 
 Commonly used functions
 
 ### Getting this repository
 
-- `clone` this repository as normal: `git clone git@github.com:bi-sdal/dockerimages.git`
-    - then in the repository run:
-        - `git submodule init && git submodule update`
-- or you can run `git clone --recursive git@github.com:bi-sdal/dockerimages.git`
+-   `clone` this repository as normal: `git clone git@github.com:bi-sdal/dockerimages.git`
+    -   then in the repository run:
+        -   `git submodule init && git submodule update`
+-   or you can run `git clone --recursive git@github.com:bi-sdal/dockerimages.git`
 
 ### Updating everything before making more changes
 
-```
-git pull --recurse-submodules=yes origin master && \
-git submodule update --remote --merge
-```
+    git pull --recurse-submodules=yes origin master && \
+    git submodule update --remote --merge
 
 ### Making changes to the repository (not the submodules)
 
-- Make edits like before
-- `git add`
-- `git commit -m ''`
-- `git push origin master`
+-   Make edits like before
+-   `git add`
+-   `git commit -m ''`
+-   `git push origin master`
 
 ### Making changes to one of the submodules
 
-- make change to individual submodule
-    - `cd` into the submodule
-    - `git checkout master`
-    - make yo changes
-    - `git add` / `git commit` like a normal repository
-    - `cd ..` back to the root repository
-- update submodule references
-    - `git commit -am 'update submodule references'`
-    - `git push --recurse-submodules=on-demand origin master`
+-   make change to individual submodule
+    -   `cd` into the submodule
+    -   `git checkout master`
+    -   make yo changes
+    -   `git add` / `git commit` like a normal repository
+    -   `cd ..` back to the root repository
+-   update submodule references
+    -   `git commit -am 'update submodule references'`
+    -   `git push --recurse-submodules=on-demand origin master`
 
 ### Add a submodule
 
-- `git submodule add <GIT URL>`
-- `git submodule update --remote`
+-   `git submodule add <GIT URL>`
+-   `git submodule update --remote`
 
 ### Pulling down a new submodule created elsewhere
 
-```
-git submodule init && \
-git submodule update --remote
-```
+    git submodule init && \
+    git submodule update --remote
 
-# What's in here?
+What's in here?
+===============
 
 scripts and stuff for the docker containers
 
-- `install.R`: Script to install packages (used by docker containers)
-- `docker-compose.yml`: `docker-compose up -d` to spin up all the containers
-- `build.sh`: script to built the containers properly, call this script from within one of the submodule folders `../build.sh`
-- `gettin_docker_running_centos_7`: ???
+-   `install.R`: Script to install packages (used by docker containers)
+-   `docker-compose.yml`: `docker-compose up -d` to spin up all the containers
+-   `build.sh`: script to built the containers properly, call this script from within one of the submodule folders `../build.sh`
+-   `gettin_docker_running_centos_7`: ???
 
 This repository uses `git submodules`
 
-Note: `docker-compose` uses the folder it is in as a prefix for container names.
-Caused an error with the networking.
-So the `dockerimages` repository name is really important here.
+Note: `docker-compose` uses the folder it is in as a prefix for container names. Caused an error with the networking. So the `dockerimages` repository name is really important here.
 
 <hr>
+Older commands and instructions
+===============================
 
-# Older commands and instructions
-
-## Getting (fetch/merge) all changes in submodles
+Getting (fetch/merge) all changes in submodles
+----------------------------------------------
 
 assumes you want to update the checkout to the `master` branch
 
 `git submodule update --remote --merge`
 
-## Getting the `diff` by showing submodule log
+Getting the `diff` by showing submodule log
+-------------------------------------------
 
 `git diff --submodule`
 
-## Update everything
+Update everything
+-----------------
 
 `git submodule foreach git pull origin master`
 
-## AHHH!!! Just bring me to master (discard all changes)
+AHHH!!! Just bring me to master (discard all changes)
+-----------------------------------------------------
 
-```bash
+``` bash
 git submodule foreach git checkout master && \
 git submodule foreach git pull origin master && \
 git pull origin master
 ```
 
-## Pushing and Pulling
+Pushing and Pulling
+-------------------
 
-- `git pull --recurse-submodules=yes origin master`
-- `git push --recurse-submodules=on-demand origin master`
+-   `git pull --recurse-submodules=yes origin master`
+-   `git push --recurse-submodules=on-demand origin master`
