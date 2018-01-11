@@ -357,3 +357,17 @@ services:
       - SYS_ADMIN
     ports:
       - 8754:8787
+
+  rstudio_ckelling:
+    image: sdal/rss-mro-ldap-ssh-c7
+    container_name: rstudio_ckelling
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8755:8787
