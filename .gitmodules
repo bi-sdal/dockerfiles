@@ -46,3 +46,6 @@
 [submodule "rss-r-ldap-ssh-c7"]
 	path = rss-r-ldap-ssh-c7
 	url = git@github.com:bi-sdal/rss-r-ldap-ssh-c7.git
+[submodule "dpl"]
+	path = dpl
+	url = git@github.com:bi-sdal/dpl.git
