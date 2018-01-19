@@ -49,3 +49,6 @@
 [submodule "dpl"]
 	path = dpl
 	url = git@github.com:bi-sdal/dpl.git
+[submodule "dpl7"]
+	path = dpl7
+	url = git@github.com:bi-sdal/dpl7.git

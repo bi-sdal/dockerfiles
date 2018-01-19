@@ -20,6 +20,10 @@ volumes:
   dpl_profiles:
   dpl_themes:
   dpl_sites:
+  dpl7_modules:
+  dpl7_profiles:
+  dpl7_themes:
+  dpl7_sites:
 
 services:
   postgresql:
@@ -32,6 +36,20 @@ services:
       - SYS_ADMIN
     ports:
       - 5433:5432
+
+  drupal7:
+    image: sdal/dpl7
+    container_name: drupal7
+    volumes:
+      - dpl7_modules:/var/www/html/modules
+      - dpl7_profiles:/var/www/html/profiles
+      - dpl7_themes:/var/www/html/themes
+      - dpl7_sites:/var/www/html/sites
+#      - dpl7_sites:/drupal_sites_setup
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8383:80
 
   drupal:
     image: sdal/drupal
