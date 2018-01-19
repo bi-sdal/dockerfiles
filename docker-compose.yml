@@ -16,10 +16,10 @@ volumes:
   shy_apps:
   rpkgs:
   checkpoint:
-  dpl_modules:
-  dpl_profiles:
-  dpl_themes:
-  dpl_sites:
+#  dpl_modules:
+#  dpl_profiles:
+#  dpl_themes:
+#  dpl_sites:
   dpl7_modules:
   dpl7_profiles:
   dpl7_themes:
@@ -51,19 +51,19 @@ services:
     ports:
       - 8383:80
 
-  drupal:
-    image: sdal/drupal
-    container_name: drupal
-    volumes:
-      - dpl_modules:/var/www/html/modules
-      - dpl_profiles:/var/www/html/profiles
-      - dpl_themes:/var/www/html/themes
-      - dpl_sites:/var/www/html/sites
+#  drupal:
+#    image: sdal/drupal
+#    container_name: drupal
+#    volumes:
+#      - dpl_modules:/var/www/html/modules
+#      - dpl_profiles:/var/www/html/profiles
+#      - dpl_themes:/var/www/html/themes
+#      - dpl_sites:/var/www/html/sites
 #      - dpl_sites:/drupal_sites_setup
-    cap_add:
-      - SYS_ADMIN
-    ports:
-      - 8484:80
+#    cap_add:
+#      - SYS_ADMIN
+#    ports:
+#      - 8484:80
 
  # adminer:
  #   image: sdal/adminer-httpd-ldap-ssh-c7
