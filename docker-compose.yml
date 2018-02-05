@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 
 # Notes about this docker-compose file
 # the R packages are installed within the rpkgs container
@@ -93,16 +93,16 @@ services:
     cap_add:
       - SYS_ADMIN
 
-  rpkgs:
-    image: sdal/rpkgs-mro-ldap-ssh-c7
-    container_name: rpkgs
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-      - /etc/group:/etc/group
-      - rpkgs:/home/rpkgs/rpkgs
-      - checkpoint:/checkpoint
-    cap_add:
-      - SYS_ADMIN
+  # rpkgs:
+  #   image: sdal/rpkgs-mro-ldap-ssh-c7
+  #   container_name: rpkgs
+  #   volumes:
+  #     - /sys/fs/cgroup:/sys/fs/cgroup:ro
+  #     - /etc/group:/etc/group
+  #     - rpkgs:/home/rpkgs/rpkgs
+  #     - checkpoint:/checkpoint
+  #   cap_add:
+  #     - SYS_ADMIN
 
   rstudio:
     image: sdal/rss-mro-ldap-ssh-c7
