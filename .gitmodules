@@ -23,31 +23,31 @@
 	path = adminer-httpd-ldap-ssh-c7
 	url = git@github.com:bi-sdal/adminer-httpd-ldap-ssh-c7.git
 [submodule "ngx-ldap-ssh-c7"]
-	path = ngx-ldap-ssh-c7
+	path = inactive/ngx-ldap-ssh-c7
 	url = git@github.com:bi-sdal/ngx-ldap-ssh-c7.git
 [submodule "dkw-ngx-ldap-ssh-c7"]
-	path = dkw-ngx-ldap-ssh-c7
+	path = inactive/dkw-ngx-ldap-ssh-c7
 	url = git@github.com:bi-sdal/dkw-ngx-ldap-ssh-c7.git
 [submodule "adm-ngx-ldap-ssh-c7"]
-	path = adm-ngx-ldap-ssh-c7
+	path = inactive/adm-ngx-ldap-ssh-c7
 	url = git@github.com:bi-sdal/adm-ngx-ldap-ssh-c7.git
 [submodule "rpkgs-mro-ldap-ssh-c7"]
 	path = rpkgs-mro-ldap-ssh-c7
 	url = git@github.com:bi-sdal/rpkgs-mro-ldap-ssh-c7.git
 [submodule "tex-ldap-ssh-c7"]
-	path = tex-ldap-ssh-c7
+	path = inactive/tex-ldap-ssh-c7
 	url = git@github.com:bi-sdal/tex-ldap-ssh-c7.git
 [submodule "shy-mro-ldap-ssh-c7"]
 	path = shy-mro-ldap-ssh-c7
 	url = git@github.com:bi-sdal/shy-mro-ldap-ssh-c7.git
 [submodule "r-ldap-ssh-c7"]
-	path = r-ldap-ssh-c7
+	path = inactive/r-ldap-ssh-c7
 	url = git@github.com:bi-sdal/r-ldap-ssh-c7.git
 [submodule "rss-r-ldap-ssh-c7"]
-	path = rss-r-ldap-ssh-c7
+	path = inactive/rss-r-ldap-ssh-c7
 	url = git@github.com:bi-sdal/rss-r-ldap-ssh-c7.git
 [submodule "dpl"]
-	path = dpl
+	path = inactive/dpl
 	url = git@github.com:bi-sdal/dpl.git
 [submodule "dpl7"]
 	path = dpl7
