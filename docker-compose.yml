@@ -82,27 +82,27 @@ services:
     cap_add:
       - SYS_ADMIN
 
-  r-cran:
-    image: sdal/r-ldap-ssh-c7
-    container_name: r-cran
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-      - /etc/group:/etc/group
-      - rpkgs:/rpkgs
-      - checkpoint:/checkpoint
-    cap_add:
-      - SYS_ADMIN
-
-  # rpkgs:
-  #   image: sdal/rpkgs-mro-ldap-ssh-c7
-  #   container_name: rpkgs
+  # r-cran:
+  #   image: sdal/r-ldap-ssh-c7
+  #   container_name: r-cran
   #   volumes:
   #     - /sys/fs/cgroup:/sys/fs/cgroup:ro
   #     - /etc/group:/etc/group
-  #     - rpkgs:/home/rpkgs/rpkgs
+  #     - rpkgs:/rpkgs
   #     - checkpoint:/checkpoint
   #   cap_add:
   #     - SYS_ADMIN
+
+  rpkgs:
+    image: sdal/rpkgs-mro-ldap-ssh-c7
+    container_name: rpkgs
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - rpkgs:/home/rpkgs/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
 
   rstudio:
     image: sdal/rss-mro-ldap-ssh-c7
