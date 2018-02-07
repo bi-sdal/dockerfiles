@@ -48,23 +48,22 @@ docker compose up -d --no-recreate
 
 Making changes is the same as a normal git repository with the `git add` and `git commit` commands.
 
-Basic useage
-============
+Submodule Basic useage
+======================
 
 Commonly used functions
 
-### First time Getting this repository
+### First time cloning and getting this repository
 
--   `clone` this repository as normal: `git clone git@github.com:bi-sdal/dockerimages.git`
-    -   then in the repository run:
-        -   `git submodule init && git submodule update`
--   or you can run `git clone --recursive git@github.com:bi-sdal/dockerimages.git`
+```bash
+git clone --recursive git@github.com:bi-sdal/dockerimages.git
+```
 
 ### Updating everything before making more changes
-
-    git pull --recurse-submodules=yes origin master && \
-    git submodule update --remote --merge
-
+```bash
+git pull --recurse-submodules=yes origin master && \
+git submodule update --remote --merge
+```
 ### Making changes to the repository (not the submodules)
 
 -   Make edits like before
@@ -111,6 +110,13 @@ Note: `docker-compose` uses the folder it is in as a prefix for container names.
 <hr>
 Older commands and instructions
 ===============================
+
+-   `clone` this repository and pull down the submodules:
+```bash
+git clone git@github.com:bi-sdal/dockerimages.git
+cd dockerimages
+git submodule init && git submodule update
+```
 
 Getting (fetch/merge) all changes in submodles
 ----------------------------------------------
