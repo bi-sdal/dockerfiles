@@ -24,30 +24,6 @@ dockerfiles
 
 ~~Pretty much~~ the entire SDAL infrastructure stack.
 
-### Deployed images
-
-| Container                     | Status                                                                                                                                                |
-|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **mro**-ldap-ssh-c7           | [![Build Status](https://travis-ci.org/bi-sdal/mro-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/mro-ldap-ssh-c7)                     |
-| **mro3.3.3**-ldap-ssh-c7      | [![Build Status](https://travis-ci.org/bi-sdal/mro3.3.3-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/mro3.3.3-ldap-ssh-c7)           |
-| **pg**-ldap-ssh-c7            | [![Build Status](https://travis-ci.org/bi-sdal/pg-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/pg-ldap-ssh-c7)                       |
-| **rss**-mro-ldap-ssh-c7       | [![Build Status](https://travis-ci.org/bi-sdal/rss-mro-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/rss-mro-ldap-ssh-c7)             |
-| **adm-ngx**-ldap-ssh-c7       | [![Build Status](https://travis-ci.org/bi-sdal/adm-ngx-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/adm-ngx-ldap-ssh-c7)             |
-| **adminer-httpd**-ldap-ssh-c7 | [![Build Status](https://travis-ci.org/bi-sdal/adminer-httpd-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/adminer-httpd-ldap-ssh-c7) |
-| **dkw-httpd**-ldap-ssh-c7     | [![Build Status](https://travis-ci.org/bi-sdal/dkw-httpd-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/dkw-httpd-ldap-ssh-c7)         |
-| **dkw-ngx**-ldap-ssh-c7       | [![Build Status](https://travis-ci.org/bi-sdal/dkw-ngx-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/dkw-ngx-ldap-ssh-c7)             |
-
-### Base images
-
-| Container             | Status                                                                                                                                |
-|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| **c7**                | [![Build Status](https://travis-ci.org/bi-sdal/c7.svg?branch=master)](https://travis-ci.org/bi-sdal/c7)                               |
-| **ldap**-ssh-c7       | [![Build Status](https://travis-ci.org/bi-sdal/ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/ldap-ssh-c7)             |
-| **ngx**-ldap-ssh-c7   | [![Build Status](https://travis-ci.org/bi-sdal/ngx-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/ngx-ldap-ssh-c7)     |
-| **httpd**-ldap-ssh-c7 | [![Build Status](https://travis-ci.org/bi-sdal/httpd-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/httpd-ldap-ssh-c7) |
-
-![](README_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-1-1.png)
-
 Basic useage
 ============
 
@@ -143,3 +119,27 @@ Pushing and Pulling
 
 -   `git pull --recurse-submodules=yes origin master`
 -   `git push --recurse-submodules=on-demand origin master`
+
+### Deployed images
+
+| Container                     | Status                                                                                                                                                |
+|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **mro**-ldap-ssh-c7           | [![Build Status](https://travis-ci.org/bi-sdal/mro-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/mro-ldap-ssh-c7)                     |
+| **mro3.3.3**-ldap-ssh-c7      | [![Build Status](https://travis-ci.org/bi-sdal/mro3.3.3-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/mro3.3.3-ldap-ssh-c7)           |
+| **pg**-ldap-ssh-c7            | [![Build Status](https://travis-ci.org/bi-sdal/pg-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/pg-ldap-ssh-c7)                       |
+| **rss**-mro-ldap-ssh-c7       | [![Build Status](https://travis-ci.org/bi-sdal/rss-mro-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/rss-mro-ldap-ssh-c7)             |
+| **adm-ngx**-ldap-ssh-c7       | [![Build Status](https://travis-ci.org/bi-sdal/adm-ngx-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/adm-ngx-ldap-ssh-c7)             |
+| **adminer-httpd**-ldap-ssh-c7 | [![Build Status](https://travis-ci.org/bi-sdal/adminer-httpd-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/adminer-httpd-ldap-ssh-c7) |
+| **dkw-httpd**-ldap-ssh-c7     | [![Build Status](https://travis-ci.org/bi-sdal/dkw-httpd-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/dkw-httpd-ldap-ssh-c7)         |
+| **dkw-ngx**-ldap-ssh-c7       | [![Build Status](https://travis-ci.org/bi-sdal/dkw-ngx-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/dkw-ngx-ldap-ssh-c7)             |
+
+### Base images
+
+| Container             | Status                                                                                                                                |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| **c7**                | [![Build Status](https://travis-ci.org/bi-sdal/c7.svg?branch=master)](https://travis-ci.org/bi-sdal/c7)                               |
+| **ldap**-ssh-c7       | [![Build Status](https://travis-ci.org/bi-sdal/ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/ldap-ssh-c7)             |
+| **ngx**-ldap-ssh-c7   | [![Build Status](https://travis-ci.org/bi-sdal/ngx-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/ngx-ldap-ssh-c7)     |
+| **httpd**-ldap-ssh-c7 | [![Build Status](https://travis-ci.org/bi-sdal/httpd-ldap-ssh-c7.svg?branch=master)](https://travis-ci.org/bi-sdal/httpd-ldap-ssh-c7) |
+
+![](README_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-1-1.png)
