@@ -1,24 +1,3 @@
-README
-================
-
--   [dockerfiles](#dockerfiles)
-    -   [Deployed images](#deployed-images)
-    -   [Base images](#base-images)
--   [Basic useage](#basic-useage)
-    -   [Getting this repository](#getting-this-repository)
-    -   [Updating everything before making more changes](#updating-everything-before-making-more-changes)
-    -   [Making changes to the repository (not the submodules)](#making-changes-to-the-repository-not-the-submodules)
-    -   [Making changes to one of the submodules](#making-changes-to-one-of-the-submodules)
-    -   [Add a submodule](#add-a-submodule)
-    -   [Pulling down a new submodule created elsewhere](#pulling-down-a-new-submodule-created-elsewhere)
--   [What's in here?](#whats-in-here)
--   [Older commands and instructions](#older-commands-and-instructions)
-    -   [Getting (fetch/merge) all changes in submodles](#getting-fetchmerge-all-changes-in-submodles)
-    -   [Getting the `diff` by showing submodule log](#getting-the-diff-by-showing-submodule-log)
-    -   [Update everything](#update-everything)
-    -   [AHHH!!! Just bring me to master (discard all changes)](#ahhh-just-bring-me-to-master-discard-all-changes)
-    -   [Pushing and Pulling](#pushing-and-pulling)
-
 dockerfiles
 ===========
 
