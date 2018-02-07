@@ -24,12 +24,36 @@ dockerfiles
 
 ~~Pretty much~~ the entire SDAL infrastructure stack.
 
+This repository uses git submodules.  All the directories in the `active` and `inactive` folders are submodules in this repository.
+You can choose to use this repository just for the compose files if you'd like and not have to deal with the git-mastics of working with submodules.
+The submodule setup is really here as a convenience so you don't need to clone all the repositories separately.
+
+Non-submodule useage
+====================
+
+If you plan to not use submodules, remember to do a separate git clone for all the other image repositories.
+
+### First time cloning
+
+- `clone` this repository as usual
+```bash
+git clone git@github.com:bi-sdal/dockerimages.git
+```
+- The directories in the `active` and `inactive` directores will be empty, this is normal.
+You can use the docker compose files with
+```bash
+docker compose up -d --no-recreate
+```
+### Making Changes
+
+Making changes is the same as a normal git repository with the `git add` and `git commit` commands.
+
 Basic useage
 ============
 
 Commonly used functions
 
-### Getting this repository
+### First time Getting this repository
 
 -   `clone` this repository as normal: `git clone git@github.com:bi-sdal/dockerimages.git`
     -   then in the repository run:
