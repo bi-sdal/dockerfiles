@@ -80,10 +80,11 @@ git submodule update --remote --merge
     -   `git add` / `git commit` like a normal repository
     -   `cd ..` back to the root repository
 -   update submodule references
-    -   `git commit -am 'update submodule references'`
+    -   `git add` submodule
+    -   `git commit -m 'update submodule references'`
     -   `git push --recurse-submodules=on-demand origin master`
 
-### Add a submodule
+### Add a new submodule
 
 -   `git submodule add <GIT URL>`
 -   `git submodule update --remote`
@@ -92,6 +93,14 @@ git submodule update --remote --merge
 
     git submodule init && \
     git submodule update --remote
+
+### Move submodule into another directory
+
+```bash
+git mv submodule_folder new_submodule_folder
+git status
+git commit -m 'move submodules'
+```
 
 What's in here?
 ===============
