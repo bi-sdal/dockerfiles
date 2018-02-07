@@ -48,6 +48,8 @@ docker compose up -d --no-recreate
 
 Making changes is the same as a normal git repository with the `git add` and `git commit` commands.
 
+<hr>
+
 Submodule Basic useage
 ======================
 
@@ -134,7 +136,7 @@ You can do this with oneline using:
 ```bash
 git ls-files --others --exclude-standard | xargs rm -rf
 ```
-
+<hr>
 
 What's in here?
 ===============
@@ -151,6 +153,7 @@ This repository uses `git submodules`
 Note: `docker-compose` uses the folder it is in as a prefix for container names. Caused an error with the networking. So the `dockerimages` repository name is really important here.
 
 <hr>
+
 Older commands and instructions
 ===============================
 
