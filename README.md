@@ -102,6 +102,40 @@ git status
 git commit -m 'move submodules'
 ```
 
+### Dealing with moved submodules
+
+You might end up with this `status` message after modules are moved
+
+```bash
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	adminer-httpd-ldap-ssh-c7/
+	c7/
+	dkw-httpd-ldap-ssh-c7/
+	dpl7/
+	httpd-ldap-ssh-c7/
+	ldap-ssh-c7/
+	mro-ldap-ssh-c7/
+	pg-ldap-ssh-c7/
+	rpkgs-mro-ldap-ssh-c7/
+	rss-mro-ldap-ssh-c7/
+	shy-mro-ldap-ssh-c7/
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+To resolve this, you just need to remove the folders listed in untracked files.
+You can do this with oneline using:
+
+```bash
+git ls-files --others --exclude-standard | xargs rm -rf
+```
+
+
 What's in here?
 ===============
 
