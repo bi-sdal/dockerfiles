@@ -69,7 +69,8 @@ services:
       - SYS_ADMIN
 
   rstudio:
-    image: sdal/rss-mro-ldap-ssh-c7
+    # image: sdal/rss-mro-ldap-ssh-c7
+    image: sdal/rss-mro-c7sd_auth
     container_name: rstudio
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
