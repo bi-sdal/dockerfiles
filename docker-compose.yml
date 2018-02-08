@@ -6,7 +6,7 @@ version: '3'
 # The R packages are not installed by default (i.e., in the Dockerfile)
 # if you completely tear and remove all containers/volumnes/etc
 # remember to exec into the `rpkgs` container and manually install packages
-# there is code examples and links to the scripts in the rpkgs Dockerfile
+# there are code examples and links to the scripts in the rpkgs Dockerfile
 
 volumes:
   pg_data:
@@ -46,31 +46,6 @@ services:
     ports:
       - 8383:80
 
- # adminer:
- #   image: sdal/adminer-httpd-ldap-ssh-c7
- #   container_name: adminer
- #   volumes:
- #     - /sys/fs/cgroup:/sys/fs/cgroup:ro
- #   cap_add:
- #     - SYS_ADMIN
- #   links:
- #     - postgresql
- #   ports:
- #     - 8080:80
-
-  dokuwiki:
-    image: sdal/dkw-httpd-ldap-ssh-c7
-    container_name: dokuwiki
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-      - dkw_data:/var/www/html/dokuwiki/data
-      - dkw_conf:/var/www/html/dokuwiki/conf
-      - dkw_lib:/var/www/html/dokuwiki/lib
-    cap_add:
-      - SYS_ADMIN
-    ports:
-      - 8282:80
-
   mro:
     image: sdal/mro-ldap-ssh-c7
     container_name: mro
@@ -81,17 +56,6 @@ services:
       - checkpoint:/checkpoint
     cap_add:
       - SYS_ADMIN
-
-  # r-cran:
-  #   image: sdal/r-ldap-ssh-c7
-  #   container_name: r-cran
-  #   volumes:
-  #     - /sys/fs/cgroup:/sys/fs/cgroup:ro
-  #     - /etc/group:/etc/group
-  #     - rpkgs:/rpkgs
-  #     - checkpoint:/checkpoint
-  #   cap_add:
-  #     - SYS_ADMIN
 
   rpkgs:
     image: sdal/rpkgs-mro-ldap-ssh-c7
@@ -144,3 +108,39 @@ services:
       - SYS_ADMIN
     ports:
       - 4444:4444
+
+  dokuwiki:
+    image: sdal/dkw-httpd-ldap-ssh-c7
+    container_name: dokuwiki
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - dkw_data:/var/www/html/dokuwiki/data
+      - dkw_conf:/var/www/html/dokuwiki/conf
+      - dkw_lib:/var/www/html/dokuwiki/lib
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8282:80
+
+ # adminer:
+ #   image: sdal/adminer-httpd-ldap-ssh-c7
+ #   container_name: adminer
+ #   volumes:
+ #     - /sys/fs/cgroup:/sys/fs/cgroup:ro
+ #   cap_add:
+ #     - SYS_ADMIN
+ #   links:
+ #     - postgresql
+ #   ports:
+ #     - 8080:80
+
+ # r-cran:
+ #   image: sdal/r-ldap-ssh-c7
+ #   container_name: r-cran
+ #   volumes:
+ #     - /sys/fs/cgroup:/sys/fs/cgroup:ro
+ #     - /etc/group:/etc/group
+ #     - rpkgs:/rpkgs
+ #     - checkpoint:/checkpoint
+ #   cap_add:
+ #     - SYS_ADMIN
