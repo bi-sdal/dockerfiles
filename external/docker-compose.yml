@@ -16,7 +16,7 @@ volumes:
 services:
 
   rstudio_arldhs:
-    image: sdal/rss_external
+    image: sdal/rss_external:latest
     container_name: rstudio_arldhs
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
