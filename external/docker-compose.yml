@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 
 # Notes about this docker-compose file
 # the R packages are installed within the rpkgs container
@@ -16,8 +16,9 @@ volumes:
 services:
 
   rstudio_arldhs:
-    image: sdal/rss_external
+    image: sdal/rss_external:latest
     container_name: rstudio_arldhs
+    mem_limit: 10g
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - ext_etc:/etc
