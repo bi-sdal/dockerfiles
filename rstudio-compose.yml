@@ -157,6 +157,20 @@ services:
     ports:
       - 8761:8787
 
+  rstudio_shinek:
+    image: sdal/rss-mro-ldap-ssh-c7
+    container_name: rstudio_shinek
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8762:8787
+
   # DSPG STUDENTS
 
   rstudio_maddieka:
