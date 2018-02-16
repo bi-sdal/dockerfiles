@@ -1,0 +1,9 @@
+[Unit]
+Description=Share share dir
+
+[Service]
+Type=oneshot
+ExecStart=/etc/share_dir.sh
+
+[Install]
+WantedBy=multi-user.target

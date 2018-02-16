@@ -1,28 +1,23 @@
-version: '3'
-
-# Notes about this docker-compose file
-# the R packages are installed within the rpkgs container
-# it uses the 'global' `rpkgs` volumne
-# The R packages are not installed by default (i.e., in the Dockerfile)
-# if you completely tear and remove all containers/volumnes/etc
-# remember to exec into the `rpkgs` container and manually install packages
-# there is code examples and links to the scripts in the rpkgs Dockerfile
+version: '2'
 
 volumes:
-  ext_etc:
-  ext_home:
-  ext_share:
+  arldhs_etc:
+  arldhs_home:
+  arldhs_share:
+  arldhs_opt:
 
 services:
 
   rstudio_arldhs:
-    image: sdal/rss_external
+    image: sdal/rss_external:latest
     container_name: rstudio_arldhs
+    mem_limit: 10g
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
-      - ext_etc:/etc
-      - ext_home:/home
-      - ext_share:/home/share
+      - arldhs_etc:/etc
+      - arldhs_home:/home
+      - arldhs_opt:/opt
+      - arldhs_share:/home/share
     cap_add:
       - SYS_ADMIN
     ports:

@@ -23,8 +23,12 @@ EXPOSE 8787
 
 RUN yum install -y cronie && systemctl enable crond
 
+COPY share_dir.sh /etc/share_dir.sh
+COPY share_dir.service /etc/systemd/system/share_dir.service
+RUN chmod +x /etc/share_dir.sh
 RUN mkdir /home/share
 RUN chmod 777 /home/share
 
+RUN systemctl enable share_dir.service
 CMD ["/lib/systemd/systemd"]
 #CMD ["/usr/sbin/init"]
