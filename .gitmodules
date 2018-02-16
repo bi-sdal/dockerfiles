@@ -52,3 +52,6 @@
 [submodule "dpl7"]
 	path = active/dpl7
 	url = git@github.com:bi-sdal/dpl7.git
+[submodule "active/c7sd_auth"]
+	path = active/c7sd_auth
+	url = git@github.com:bi-sdal/c7sd_auth.git
