@@ -55,3 +55,12 @@
 [submodule "active/c7sd_auth"]
 	path = active/c7sd_auth
 	url = git@github.com:bi-sdal/c7sd_auth.git
+[submodule "active/mro-c7sd_auth"]
+	path = active/mro-c7sd_auth
+	url = git@github.com:bi-sdal/mro-c7sd_auth.git
+[submodule "active/rss-mro-c7sd_auth"]
+	path = active/rss-mro-c7sd_auth
+	url = git@github.com:bi-sdal/rss-mro-c7sd_auth.git
+[submodule "active/shy-mro-c7sd_auth"]
+	path = active/shy-mro-c7sd_auth
+	url = git@github.com:bi-sdal/shy-mro-c7sd_auth.git
