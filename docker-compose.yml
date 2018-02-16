@@ -49,7 +49,7 @@ services:
       - 8383:80
 
   mro:
-    image: sdal/mro-ldap-ssh-c7
+    image: sdal/mro-c7sd_auth
     container_name: mro
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -60,7 +60,7 @@ services:
       - SYS_ADMIN
 
   rpkgs:
-    image: sdal/rpkgs-mro-ldap-ssh-c7
+    image: sdal/rpkgs-mro-c7sd_auth
     container_name: rpkgs
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -71,7 +71,6 @@ services:
       - SYS_ADMIN
 
   rstudio:
-    # image: sdal/rss-mro-ldap-ssh-c7
     image: sdal/rss-mro-c7sd_auth
     container_name: rstudio
     volumes:
@@ -86,7 +85,7 @@ services:
       - 8788:8787
 
   shiny:
-    image: sdal/shy-mro-ldap-ssh-c7
+    image: sdal/shy-mro-c7sd_auth
     container_name: shiny
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
