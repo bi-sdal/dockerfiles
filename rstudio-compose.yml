@@ -18,7 +18,7 @@ services:
   ############################################
 
   rstudio_chend:
-    image: sdal/rss-mro-ldap-ssh-c7
+    image: sdal/rss-mro-c7sd_auth
     container_name: rstudio_chend
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -32,7 +32,7 @@ services:
       - 3125:8787
 
   rstudio_aschroed:
-    image: sdal/rss-mro-ldap-ssh-c7
+    image: sdal/rss-mro-c7sd_auth
     container_name: rstudio_aschroed
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -46,7 +46,7 @@ services:
       - 3122:8787
 
   rstudio_joshg22:
-    image: sdal/rss-mro-ldap-ssh-c7
+    image: sdal/rss-mro-c7sd_auth
     container_name: rstudio_joshg22
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -60,7 +60,7 @@ services:
       - 3127:8787
 
   rstudio_dhigdon:
-    image: sdal/rss-mro-ldap-ssh-c7
+    image: sdal/rss-mro-c7sd_auth
     container_name: rstudio_dhigdon
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -74,7 +74,7 @@ services:
       - 3120:8787
 
   rstudio_val20003:
-    image: sdal/rss-mro-ldap-ssh-c7
+    image: sdal/rss-mro-c7sd_auth
     container_name: rstudio_val20003
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -88,7 +88,7 @@ services:
       - 3121:8787
 
   rstudio_gkorkmaz:
-    image: sdal/rss-mro-ldap-ssh-c7
+    image: sdal/rss-mro-c7sd_auth
     container_name: rstudio_gkorkmaz
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -102,7 +102,7 @@ services:
       - 3113:8787
 
   rstudio_bpires:
-    image: sdal/rss-mro-ldap-ssh-c7
+    image: sdal/rss-mro-c7sd_auth
     container_name: rstudio_bpires
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -116,7 +116,7 @@ services:
       - 3345:8787
 
   rstudio_ian85:
-    image: sdal/rss-mro-ldap-ssh-c7
+    image: sdal/rss-mro-c7sd_auth
     container_name: rstudio_ian85
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -130,7 +130,7 @@ services:
       - 3110:8787
 
   rstudio_isbrad:
-    image: sdal/rss-mro-ldap-ssh-c7
+    image: sdal/rss-mro-c7sd_auth
     container_name: rstudio_isbrad
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -144,7 +144,7 @@ services:
       - 8760:8787
 
   rstudio_lintan:
-    image: sdal/rss-mro-ldap-ssh-c7
+    image: sdal/rss-mro-c7sd_auth
     container_name: rstudio_lintan
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -174,7 +174,7 @@ services:
   # DSPG STUDENTS
 
   rstudio_maddieka:
-    image: sdal/rss-mro-ldap-ssh-c7
+    image: sdal/rss-mro-c7sd_auth
     container_name: rstudio_maddieka
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -188,7 +188,7 @@ services:
       - 8750:8787
 
   rstudio_eiriki:
-    image: sdal/rss-mro-ldap-ssh-c7
+    image: sdal/rss-mro-c7sd_auth
     container_name: rstudio_eiriki
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -202,7 +202,7 @@ services:
       - 8752:8787
 
   rstudio_ckelling:
-    image: sdal/rss-mro-ldap-ssh-c7
+    image: sdal/rss-mro-c7sd_auth
     container_name: rstudio_ckelling
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
