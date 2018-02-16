@@ -64,3 +64,6 @@
 [submodule "active/shy-mro-c7sd_auth"]
 	path = active/shy-mro-c7sd_auth
 	url = git@github.com:bi-sdal/shy-mro-c7sd_auth.git
+[submodule "active/rpkgs-mro-c7sd_auth"]
+	path = active/rpkgs-mro-c7sd_auth
+	url = git@github.com:bi-sdal/rpkgs-mro-c7sd_auth.git
