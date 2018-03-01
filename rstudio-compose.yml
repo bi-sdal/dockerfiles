@@ -158,7 +158,7 @@ services:
       - 8761:8787
 
   rstudio_shinek:
-    image: sdal/rss-mro-ldap-ssh-c7
+    image: sdal/rss-mro-c7sd_auth
     container_name: rstudio_shinek
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
