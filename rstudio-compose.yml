@@ -228,3 +228,73 @@ services:
       - SYS_ADMIN
     ports:
       - 8755:8787
+
+  rstudio_hsbb8:
+    image: sdal/rss-mro-c7sd_auth
+    container_name: rstudio_hsbb8
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8751:8787
+
+  rstudio_djliden91:
+    image: sdal/rss-mro-c7sd_auth
+    container_name: rstudio_djliden91
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8753:8787
+
+  rstudio_davon:
+    image: sdal/rss-mro-c7sd_auth
+    container_name: rstudio_davon
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8754:8787
+
+  rstudio_sheen:
+    image: sdal/rss-mro-c7sd_auth
+    container_name: rstudio_sheen
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8756:8787
+
+  rstudio_jbsc:
+    image: sdal/rss-mro-c7sd_auth
+    container_name: rstudio_jbsc
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8757:8787
