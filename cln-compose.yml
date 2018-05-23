@@ -1,0 +1,26 @@
+version: '3'
+
+volumes:
+  cln_psql:
+
+services:
+  cln_psql:
+    image: sdal/cln_psql
+    container_name: cln_psql
+    volumes:
+      - cln_psql:/var/lib/pgsql/9.6/data
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 5434:5432
+
+  cln:
+    image: sdal/cln
+    container_name: cln
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8000:8000
