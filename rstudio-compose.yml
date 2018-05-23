@@ -298,3 +298,31 @@ services:
       - SYS_ADMIN
     ports:
       - 8757:8787
+
+  rstudio_devika:
+    image: sdal/rss-mro-c7sd_auth
+    container_name: rstudio_devika
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8758:8787
+
+  rstudio_feng:
+    image: sdal/rss-mro-c7sd_auth
+    container_name: rstudio_feng
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8759:8787
