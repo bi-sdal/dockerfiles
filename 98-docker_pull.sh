@@ -1,11 +1,8 @@
-docker pull sdal/c7
-docker pull sdal/ldap-ssh-c7
-docker pull sdal/mro-ldap-ssh-c7
-docker pull sdal/rpkgs-mro-ldap-ssh-c7
-docker pull sdal/rss-mro-ldap-ssh-c7
-docker pull sdal/shy-mro-ldap-ssh-c7
-
-docker pull sdal/shy-mro-ldap-ssh-c7
-docker pull sdal/adminer-httpd-ldap-ssh-c7
+docker pull sdal/c7sd_auth
+#docker pull sdal/ldap-ssh-c7
+docker pull sdal/mro-c7sd_auth
+docker pull sdal/rpkgs-mro-c7sd_auth
+docker pull sdal/rss-mro-c7sd_auth
+docker pull sdal/shy-mro-c7sd_auth
 
 echo "Images pulled."
