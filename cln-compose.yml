@@ -10,6 +10,7 @@ services:
     volumes:
       - cln_psql:/var/lib/pgsql/9.6/data
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /home/bjgoode/cln_psql_bkup:/cln_psql_bkup
     cap_add:
       - SYS_ADMIN
     ports:
@@ -23,4 +24,9 @@ services:
     cap_add:
       - SYS_ADMIN
     ports:
-      - 8000:8000
+      - 8686:8000
+    depends_on:
+      - cln_psql
+    command: python36 /code/manage.py migrate --noinput
+    command: python36 /code/manage.py collectstatic
+    command: gunicorn sdal_cln.wsgi:application --bind 0.0.0.0:8000 --workers 3
