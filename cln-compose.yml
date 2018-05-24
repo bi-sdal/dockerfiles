@@ -1,31 +1,33 @@
 version: '3'
 
-volumes:
-  db:
+#volumes:
+#  db:
 
 services:
   db:
     image: sdal/cln_psql
+#    image: postgres
     container_name: db
-    volumes:
-      - db:/var/lib/pgsql/9.6/data
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    cap_add:
-      - SYS_ADMIN
+#    volumes:
+#      - db:/var/lib/pgsql/9.6/data
+#      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+#    cap_add:
+#      - SYS_ADMIN
     ports:
-      - 5434:5432
+      - 5432:5432
 
   cln:
-    image: sdal/cln
+    image: cln
     container_name: cln
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
     cap_add:
       - SYS_ADMIN
     ports:
       - 8686:8000
     depends_on:
       - db
-    command: python36 /code/manage.py migrate
-    command: python36 /code/manage.py collectstatic
+    command: python3.6 /code/manage.py migrate
+    command: python3.6 /code/manage.py collectstatic
     command: gunicorn sdal_cln.wsgi:application --bind 0.0.0.0:8000 --workers 3
