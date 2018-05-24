@@ -2,14 +2,16 @@ version: '3'
 
 volumes:
   db:
+  cln_components:
 
 services:
   db:
     image: sdal/cln_psql
     container_name: db
     volumes:
-      - db:/var/lib/pgsql/9.6/data
+      - db:/var/lib/postgresql/data
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /home/bjgoode/cln_psql_bkup:/cln_psql_bkup
     cap_add:
       - SYS_ADMIN
     ports:
@@ -21,6 +23,7 @@ services:
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
+      - cln_components:/code/components
     cap_add:
       - SYS_ADMIN
     ports:
