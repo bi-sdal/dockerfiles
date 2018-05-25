@@ -30,6 +30,8 @@ services:
       - 8686:8000
     depends_on:
       - db
-    command: python3.6 /code/manage.py migrate
-    command: python3.6 /code/manage.py collectstatic
-    command: gunicorn sdal_cln.wsgi:application --bind 0.0.0.0:8000 --workers 3
+#    command:  python3.6 /code/manage.py migrate
+#    command: python3.6 /code/manage.py collectstatic
+#    command: bash -c "gunicorn sdal_cln.wsgi:application --bind 0.0.0.0:8000"
+#    command: python3.6 /code/manage.py runserver
+#    command: bash -c "python3.6 manage.py runserver && /usr/sbin/init"
