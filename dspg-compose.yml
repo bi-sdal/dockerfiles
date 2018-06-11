@@ -13,13 +13,9 @@ volumes:
   checkpoint:
 
 services:
-  ############################################
-  # BEGIN INDIVIDUAL USER RSTUDIO CONTAINERS #
-  ############################################
-
-  rstudio_chend:
+  rstudio_eiriki:
     image: sdal/rss-mro-c7sd_auth
-    container_name: rstudio_chend
+    container_name: rstudio_eiriki
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
@@ -29,11 +25,11 @@ services:
     cap_add:
       - SYS_ADMIN
     ports:
-      - 3125:8787
+      - 8752:8787
 
-  rstudio_aschroed:
+  rstudio_hsbb8:
     image: sdal/rss-mro-c7sd_auth
-    container_name: rstudio_aschroed
+    container_name: rstudio_hsbb8
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
@@ -43,11 +39,11 @@ services:
     cap_add:
       - SYS_ADMIN
     ports:
-      - 3122:8787
+      - 8751:8787
 
-  rstudio_joshg22:
+  rstudio_djliden91:
     image: sdal/rss-mro-c7sd_auth
-    container_name: rstudio_joshg22
+    container_name: rstudio_djliden91
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
@@ -57,11 +53,11 @@ services:
     cap_add:
       - SYS_ADMIN
     ports:
-      - 3127:8787
+      - 8753:8787
 
-  rstudio_dhigdon:
+  rstudio_davon:
     image: sdal/rss-mro-c7sd_auth
-    container_name: rstudio_dhigdon
+    container_name: rstudio_davon
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
@@ -71,11 +67,11 @@ services:
     cap_add:
       - SYS_ADMIN
     ports:
-      - 3120:8787
+      - 8754:8787
 
-  rstudio_val20003:
+  rstudio_sheen:
     image: sdal/rss-mro-c7sd_auth
-    container_name: rstudio_val20003
+    container_name: rstudio_sheen
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
@@ -85,11 +81,11 @@ services:
     cap_add:
       - SYS_ADMIN
     ports:
-      - 3121:8787
+      - 8756:8787
 
-  rstudio_gkorkmaz:
+  rstudio_jbsc:
     image: sdal/rss-mro-c7sd_auth
-    container_name: rstudio_gkorkmaz
+    container_name: rstudio_jbsc
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
@@ -99,11 +95,11 @@ services:
     cap_add:
       - SYS_ADMIN
     ports:
-      - 3113:8787
+      - 8757:8787
 
-  rstudio_bpires:
+  rstudio_dnair1:
     image: sdal/rss-mro-c7sd_auth
-    container_name: rstudio_bpires
+    container_name: rstudio_dnair1
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
@@ -113,11 +109,11 @@ services:
     cap_add:
       - SYS_ADMIN
     ports:
-      - 3345:8787
+      - 8758:8787
 
-  rstudio_bjgoode:
+  rstudio_fle907:
     image: sdal/rss-mro-c7sd_auth
-    container_name: rstudio_bjgoode
+    container_name: rstudio_fle907
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
@@ -127,11 +123,12 @@ services:
     cap_add:
       - SYS_ADMIN
     ports:
-      - 4600:8787
+      - 8759:8787
 
-  rstudio_ian85:
+
+  rstudio_kelseym8:
     image: sdal/rss-mro-c7sd_auth
-    container_name: rstudio_ian85
+    container_name: rstudio_kelseym8
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
@@ -141,15 +138,11 @@ services:
     cap_add:
       - SYS_ADMIN
     ports:
-      - 3110:8787
+      - 8720:8787
 
-###############################################################################
-# External
-###############################################################################
-
-  rstudio_isbrad:
+  rstudio_keren9:
     image: sdal/rss-mro-c7sd_auth
-    container_name: rstudio_isbrad
+    container_name: rstudio_keren9
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
@@ -159,11 +152,11 @@ services:
     cap_add:
       - SYS_ADMIN
     ports:
-      - 8760:8787
+      - 8721:8787
 
-  rstudio_lintan:
+  rstudio_alexan16:
     image: sdal/rss-mro-c7sd_auth
-    container_name: rstudio_lintan
+    container_name: rstudio_alexan16
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
@@ -173,11 +166,11 @@ services:
     cap_add:
       - SYS_ADMIN
     ports:
-      - 8761:8787
+      - 8722:8787
 
-  rstudio_shinek:
+  rstudio_weerasu3:
     image: sdal/rss-mro-c7sd_auth
-    container_name: rstudio_shinek
+    container_name: rstudio_weerasu3
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
@@ -187,11 +180,11 @@ services:
     cap_add:
       - SYS_ADMIN
     ports:
-      - 8762:8787
+      - 8723:8787
 
-  rstudio_ckelling:
+  rstudio_luke3874:
     image: sdal/rss-mro-c7sd_auth
-    container_name: rstudio_ckelling
+    container_name: rstudio_luke3874
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /etc/group:/etc/group
@@ -201,4 +194,74 @@ services:
     cap_add:
       - SYS_ADMIN
     ports:
-      - 8755:8787
+      - 8724:8787
+
+  rstudio_ragsaw96:
+    image: sdal/rss-mro-c7sd_auth
+    container_name: rstudio_ragsaw96
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8725:8787
+
+  rstudio_armimo97:
+    image: sdal/rss-mro-c7sd_auth
+    container_name: rstudio_armimo97
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8726:8787
+
+  rstudio_coryk:
+    image: sdal/rss-mro-c7sd_auth
+    container_name: rstudio_coryk
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8727:8787
+
+  rstudio_doug2019:
+    image: sdal/rss-mro-c7sd_auth
+    container_name: rstudio_doug2019
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8728:8787
+
+  rstudio_megang4:
+    image: sdal/rss-mro-c7sd_auth
+    container_name: rstudio_megang4
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8729:8787
