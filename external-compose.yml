@@ -1,0 +1,77 @@
+version: '3'
+
+volumes:
+  rpkgs:
+  checkpoint:
+
+services:
+
+    rstudio_isbrad:
+    image: sdal/rss-mro-c7sd_auth
+    container_name: rstudio_isbrad
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8760:8787
+
+  rstudio_lintan:
+    image: sdal/rss-mro-c7sd_auth
+    container_name: rstudio_lintan
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8761:8787
+
+  rstudio_shinek:
+    image: sdal/rss-mro-c7sd_auth
+    container_name: rstudio_shinek
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8762:8787
+
+  rstudio_ckelling:
+    image: sdal/rss-mro-c7sd_auth
+    container_name: rstudio_ckelling
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8755:8787
+
+  rstudio_gormley1:
+    image: sdal/rss-mro-c7sd_auth
+    container_name: rstudio_gormley1
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 8740:8787

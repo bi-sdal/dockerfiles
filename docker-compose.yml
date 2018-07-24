@@ -111,6 +111,18 @@ services:
     ports:
       - 4444:4444
 
+  selenium_chrome_chend:
+    image: selenium/standalone-chrome
+    container_name: selenium_chrome_chend
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 4440:4444
+
   dokuwiki:
     image: sdal/dkw-httpd-ldap-ssh-c7
     container_name: dokuwiki

@@ -14,7 +14,7 @@ volumes:
 
 services:
   rstudio_eiriki:
-    image: sdal/rss-mro-c7sd_auth
+    image: sdal/ext-rss-mro-c7sd_auth
     container_name: rstudio_eiriki
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -28,7 +28,7 @@ services:
       - 8752:8787
 
   rstudio_hsbb8:
-    image: sdal/rss-mro-c7sd_auth
+    image: sdal/ext-rss-mro-c7sd_auth
     container_name: rstudio_hsbb8
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -84,7 +84,7 @@ services:
       - 8756:8787
 
   rstudio_jbsc:
-    image: sdal/rss-mro-c7sd_auth
+    image: sdal/ext-rss-mro-c7sd_auth
     container_name: rstudio_jbsc
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -141,7 +141,7 @@ services:
       - 8720:8787
 
   rstudio_keren9:
-    image: sdal/rss-mro-c7sd_auth
+    image: sdal/ext-rss-mro-c7sd_auth
     container_name: rstudio_keren9
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
