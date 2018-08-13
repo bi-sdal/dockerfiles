@@ -142,3 +142,17 @@ services:
       - SYS_ADMIN
     ports:
       - 3110:8787
+
+  rstudio_tpristavec:
+    image: sdal/rss-mro-c7sd_auth
+    container_name: rstudio_tpristavec
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/group:/etc/group
+      - /home:/home
+      - rpkgs:/rpkgs
+      - checkpoint:/checkpoint
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 3117:8787
